@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.22)
+project(CppTemplate)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -pipe -fPIC -g")
+
+add_executable(test test.cpp)
+add_executable(test_template_specialization test_template_specialization.cpp)
+add_executable(test_ts_remove_pointer test_ts_remove_pointer.cpp)
+add_executable(test_partial_specialization test_partial_specialization.cpp)
+add_executable(test_type_inference test_type_inference.cpp)
+add_executable(test_const_ref test_const_ref.cpp)
+add_executable(test_constexpr test_constexpr.cpp)
+add_executable(test_lambdas_SFINAE test_lambdas_SFINAE.cpp)
+add_executable(test_IsConvertibleT test_IsConvertibleT.cpp)
+
+add_subdirectory(type_traits)
+add_subdirectory(app)

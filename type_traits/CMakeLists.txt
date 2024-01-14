@@ -1,0 +1,11 @@
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -pipe -fPIC -g")
+
+add_executable(traits_test traits_test.cpp)
+add_executable(traits_single_type traits_single_type.cpp)
+add_executable(traits_two_types traits_two_types.cpp)
+add_executable(traits_revise_type traits_revise_type.cpp)
+add_executable(traits_conditioanl traits_conditional.cpp)
+add_executable(traits_result_of traits_result_of.cpp)
+add_executable(traits_enable_if traits_enable_if.cpp)
+add_executable(traits_decay traits_decay.cpp)
+
