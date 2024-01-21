@@ -1,35 +1,9 @@
 #include <iostream>
 #include <type_traits>
 
+// remove const volatile
 template<class T>
-struct RemoveConst {
-    using type = T;
-};
-
-template<class T>
-struct RemoveConst<const T> {
-    using type = T;
-};
-
-template<class T>
-struct RemoveVolatile {
-    using type = T;
-};
-
-template<class T> 
-struct RemoveVolatile<volatile T> {
-    using type = T;
-};
-
-template<class T>
-struct RemoveCV : RemoveVolatile<typename RemoveConst<T>::type> {};
-
-// 别名模板
-template<class T>
-using RemoveCV_t = typename RemoveCV<T>::type;
-
-template<class T>
-struct DecayT : RemoveCV<T> {};
+struct DecayT : std::remove_cv<T> {};
 
 // 数组退化成指针
 template<class T>

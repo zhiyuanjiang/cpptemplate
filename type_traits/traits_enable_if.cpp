@@ -10,7 +10,7 @@
 template<class T, class Enable = void>
 class A;
 
-// 偏特化，限定第一个参数只能是浮点型；注意这里没有对A进行定义。https://www.bilibili.com/anime/
+// 偏特化，限定第一个参数只能是浮点型；注意这里没有对A进行定义。
 template<class T>
 class A<T, typename std::enable_if<std::is_floating_point<T>::value>::type> {};
 

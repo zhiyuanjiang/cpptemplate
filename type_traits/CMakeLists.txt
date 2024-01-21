@@ -8,4 +8,4 @@ add_executable(traits_conditioanl traits_conditional.cpp)
 add_executable(traits_result_of traits_result_of.cpp)
 add_executable(traits_enable_if traits_enable_if.cpp)
 add_executable(traits_decay traits_decay.cpp)
-
+add_executable(traits_void_t traits_void_t.cpp)
